@@ -1,5 +1,5 @@
 # Magnetize-Board-Game
-Implements a board game called *Magnetize* in C. 
+Implements a complex, text-based board game called *Magnetize* in C. 
 
 ## How the Game Works
 Magnetize is a board game for two players that involves black and white pieces on a rectangular grid; unlike many board games, the board stands up vertically. The objective is to form a square of pieces of your color. Players take turns dropping pieces in chosen columns in the board, where they fall to the lowest possible level. Players can also temporarily turn on a magnet," causing all their pieces to slide as far to the left or right as possible within their rows, and then to cling for some number of turns before falling downwards if they are unsupported. This dynamic gives the game an unexpected dimension and offers the potential to surprise your opponent. 
@@ -159,6 +159,20 @@ If the board becomes full without a winning condition for either player, then th
 One additional note about the effects of a magnet: There can be a cascading effect where the magnet moves one color's pieces, then the opponent's pieces fall; this may free up some of the magnetized player's pieces to move further, which could result in further opponent falls, and so on. 
 
 ## About this Project
+
+### Structure 
+
+- pos.h and pos.c: implement a struct to hold coordinates on the game board
+
+- board.h and board.c: maintain and manipulate the state of the board (information about what pieces are where)
+
+- logic.h and logic.c: implement the rules of the game
+
+- evidence.c: provides unit tests for the functions in this assignment
+
+- Makefile: builds an executable named evidence that runs the unit tests
+
+
 
 
 ### Play.c
